@@ -15,7 +15,7 @@ const convertKeys = require('convert-keys');
 
 const obj = {
   'hoge_fuga': 1,
-  'hogeHoge': {
+  hogeHoge: {
     'piyo_piyo': 'aaaa',
     'fuga_fuga': 'bbbb'
   }
