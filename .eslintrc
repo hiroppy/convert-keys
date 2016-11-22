@@ -1,6 +1,10 @@
 {
   "rules": {
-    "no-console": 0
+    "no-console": 0,
+    "key-spacing": 0,
+    "no-var": 0,
+    "prefer-arrow-callback": 0,
+    "callback-return": 0
   },
   "env": {
     "node": true,
