@@ -4,9 +4,16 @@
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "",
-  "files": [],
-  "keywords": [],
+  "description": "Convert object keys to camelCase or snakeCase.",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "camelcase",
+    "snakecase",
+    "convert",
+    "keys"
+  ],
   "homepage": "",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
