@@ -4,6 +4,14 @@ const test        = require('ava');
 const pify        = require('pify');
 const convertKeys = require('../');
 
+test('should return an empty object when give an empty object', async (t) => {
+  t.deepEqual(convertKeys.toCamel({}), {});
+});
+
+test('should return an empty array when give an empty array', async (t) => {
+  t.deepEqual(convertKeys.toCamel([]), []);
+});
+
 test('should return object as coverted camel case', async (t) => {
   const obj = {
     'hoge_fuga': 1,
