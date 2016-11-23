@@ -10,7 +10,11 @@ test('should return object as coverted camel case', async (t) => {
     'hogeHoge': {
       'piyo_piyo': 'aaaa',
       'fuga_fuga': 'bbbb'
-    }
+    },
+    'piyo_array': [
+      {'foo_bar': 'a'},
+      {'foo_bar': 'b'}
+    ]
   };
 
   const res = {
@@ -18,7 +22,11 @@ test('should return object as coverted camel case', async (t) => {
     hogeHoge: {
       piyoPiyo: 'aaaa',
       fugaFuga: 'bbbb'
-    }
+    },
+    piyoArray: [
+      {fooBar: 'a'},
+      {fooBar: 'b'}
+    ]
   };
 
   t.deepEqual(convertKeys.toCamel(obj), res);
@@ -31,7 +39,11 @@ test('should return object as coverted snake case', async (t) => {
       'piyo_piyo': 'aaaa',
       'fuga_fuga': 'bbbb',
       'testTest': 'test'
-    }
+    },
+    'piyo_array': [
+      {'fooBar': 'a'},
+      {'fooBar': 'b'}
+    ]
   };
 
   const res = {
@@ -40,7 +52,11 @@ test('should return object as coverted snake case', async (t) => {
       'piyo_piyo': 'aaaa',
       'fuga_fuga': 'bbbb',
       'test_test': 'test'
-    }
+    },
+    'piyo_array': [
+      {'foo_bar': 'a'},
+      {'foo_bar': 'b'}
+    ]
   };
 
   t.deepEqual(convertKeys.toSnake(obj), res);
