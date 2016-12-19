@@ -43,6 +43,6 @@ var toSnake = function(obj) {
 };
 
 module.exports = {
-  toCamel,
-  toSnake
+  toCamel: toCamel,
+  toSnake: toSnake
 };
