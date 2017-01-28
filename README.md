@@ -25,10 +25,10 @@ convertKeys.toCamel(obj);
 
 // output
 {
-  hogeFuga: 1,
-  hogeHoge: {
-    piyoPiyo: 'aaaa',
-    fugaFuga: 'bbbb'
+  'hogeFuga': 1,
+  'hogeHoge': {
+    'piyoPiy'o: 'aaaa',
+    'fugaFuga': 'bbbb'
   }
 }
 
