@@ -1,12 +1,13 @@
 {
   "name": "convert-keys",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
   "version": "1.2.0",
   "license": "MIT",
   "description": "Convert object keys to camelCase or snakeCase.",
   "files": [
-    "index.js"
+    "lib"
   ],
   "keywords": [
     "camelcase",
@@ -17,26 +18,33 @@
   "homepage": "",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "lint": "eslint .",
-    "test": "ava",
-    "test:watch": "ava -w",
+    "test": "npm run rm:lib && tsc && ava",
+    "build": "tsc",
+    "rm:lib": "rimraf lib",
     "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "ava": {
-    "files": [
-      "test/**/*.js"
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
     ],
-    "concurrency": 5,
-    "failFast": true,
-    "tap": true
+    "require": [
+      "ts-node/register"
+    ],
+    "files": "lib/test/**/*.js"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "babel-eslint": "^7.1.1",
+    "@types/lodash.camelcase": "^4.3.4",
+    "@types/lodash.forown": "^4.4.4",
+    "@types/lodash.isarray": "^4.0.4",
+    "@types/lodash.isplainobject": "^4.0.4",
+    "@types/lodash.snakecase": "^4.1.4",
+    "ava": "^0.25.0",
     "conventional-changelog-cli": "^1.2.0",
-    "eslint": "^3.10.2",
-    "eslint-config-sky": "^1.2.1",
-    "nyc": "^9.0.1"
+    "nyc": "^9.0.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
     "lodash.camelcase": "^4.3.0",

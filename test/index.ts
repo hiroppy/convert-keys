@@ -1,18 +1,17 @@
 'use strict';
 
-const test        = require('ava');
-const pify        = require('pify');
-const convertKeys = require('../');
+import test from 'ava';
+import * as convertKeys from '../';
 
-test('should return an empty object when give an empty object', async (t) => {
+test('should return an empty object when give an empty object', (t) => {
   t.deepEqual(convertKeys.toCamel({}), {});
 });
 
-test('should return an empty array when give an empty array', async (t) => {
+test('should return an empty array when give an empty array', (t) => {
   t.deepEqual(convertKeys.toCamel([]), []);
 });
 
-test('should return object as coverted camel case', async (t) => {
+test('should return object as coverted camel case', (t) => {
   const obj = {
     'hoge_fuga': 1,
     'hogeHoge': {
@@ -40,7 +39,7 @@ test('should return object as coverted camel case', async (t) => {
   t.deepEqual(convertKeys.toCamel(obj), res);
 });
 
-test('should return object as coverted snake case', async (t) => {
+test('should return object as coverted snake case', (t) => {
   const obj = {
     'hoge_fuga': 1,
     'hogeHoge': {
