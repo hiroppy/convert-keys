@@ -19,7 +19,8 @@
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "test": "npm run rm:lib && tsc && ava",
-    "build": "tsc",
+    "build": "npm run rm:lib && tsc",
+    "build:flow": "flowgen lib/index.d.ts -i lib/convert-keys.flow.js",
     "rm:lib": "rimraf lib",
     "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
@@ -41,6 +42,7 @@
     "@types/lodash.snakecase": "^4.1.4",
     "ava": "^0.25.0",
     "conventional-changelog-cli": "^1.2.0",
+    "flowgen": "^1.2.2",
     "nyc": "^9.0.1",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.0",

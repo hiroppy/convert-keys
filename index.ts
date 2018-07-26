@@ -10,7 +10,7 @@ import isArray = require('lodash.isarray');
  * @param {Function} cb - callback
  * @returns {Object | Array}
  */
-function walk(obj, cb) {
+function walk(obj, cb): Object | Array<any> {
   const x = isArray(obj) ? [] : {};
 
   forOwn(obj, (v, k) => {
