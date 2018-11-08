@@ -10,7 +10,7 @@ import isArray = require('lodash.isarray');
  * @param {Function} cb - callback
  * @returns {Object | Array}
  */
-function walk(obj, cb): Object | Array<any> {
+function walk(obj, cb): any {
   const x = isArray(obj) ? [] : {};
 
   forOwn(obj, (v, k) => {
@@ -22,10 +22,10 @@ function walk(obj, cb): Object | Array<any> {
   return x;
 }
 
-export function toCamel(obj: Object) {
+export function toCamel<T>(obj: Object): T {
   return walk(obj, (k) => camelCase(k));
 };
 
-export function toSnake(obj: Object) {
+export function toSnake<T>(obj: Object): T {
   return walk(obj, (k) => snakeCase(k));
 };

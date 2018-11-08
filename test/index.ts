@@ -4,11 +4,11 @@ import test from 'ava';
 import * as convertKeys from '../';
 
 test('should return an empty object when give an empty object', (t) => {
-  t.deepEqual(convertKeys.toCamel({}), {});
+  t.deepEqual(convertKeys.toCamel<{}>({}), {});
 });
 
 test('should return an empty array when give an empty array', (t) => {
-  t.deepEqual(convertKeys.toCamel([]), []);
+  t.deepEqual(convertKeys.toCamel<[]>([]), []);
 });
 
 test('should return object as coverted camel case', (t) => {
@@ -36,7 +36,7 @@ test('should return object as coverted camel case', (t) => {
     ]
   };
 
-  t.deepEqual(convertKeys.toCamel(obj), res);
+  t.deepEqual(convertKeys.toCamel<typeof res>(obj), res);
 });
 
 test('should return object as coverted snake case', (t) => {
@@ -66,5 +66,5 @@ test('should return object as coverted snake case', (t) => {
     ]
   };
 
-  t.deepEqual(convertKeys.toSnake(obj), res);
+  t.deepEqual(convertKeys.toSnake<typeof res>(obj), res);
 });
