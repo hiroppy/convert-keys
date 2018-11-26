@@ -1,7 +1,7 @@
 # convert-keys
 
-[![Build Status](https://travis-ci.org/abouthiroppy/convert-keys.svg?branch=master)](https://travis-ci.org/abouthiroppy/convert-keys)
-[![codecov](https://codecov.io/gh/abouthiroppy/convert-keys/branch/master/graph/badge.svg)](https://codecov.io/gh/abouthiroppy/convert-keys)
+[![Build Status](https://travis-ci.org/abouthiroppy/convert-keys.svg?branch=master)](https://travis-ci.org/hiroppy/convert-keys)
+[![codecov](https://codecov.io/gh/abouthiroppy/convert-keys/branch/master/graph/badge.svg)](https://codecov.io/gh/hiroppy/convert-keys)
 [![npm version](https://badge.fury.io/js/convert-keys.svg)](https://badge.fury.io/js/convert-keys)
 
 # Install
