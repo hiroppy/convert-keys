@@ -2,7 +2,7 @@
   "name": "convert-keys",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "author": "abouthiroppy <git@about-hiroppy.com> (http://about-hiroppy.com)",
+  "author": "hiroppy <git@hiroppy.me> (https://hiroppy.me)",
   "version": "1.3.3",
   "license": "MIT",
   "description": "Convert object keys to camelCase or snakeCase.",
