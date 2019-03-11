@@ -22,7 +22,8 @@
     "build": "npm run rm:lib && tsc",
     "build:flow": "flowgen lib/index.d.ts -i lib/convert-keys.flow.js",
     "rm:lib": "rimraf lib",
-    "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "postcover": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "prepublish": "npm run build"
   },
   "ava": {
     "compileEnhancements": false,
