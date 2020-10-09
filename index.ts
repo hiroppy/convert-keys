@@ -1,14 +1,8 @@
-import forOwn = require('lodash.forown');
-import camelCase = require('lodash.camelcase');
-import snakeCase = require('lodash.snakecase');
-import isPlainObject = require('lodash.isplainobject');
+import forOwn from 'lodash.forown';
+import camelCase from 'lodash.camelcase';
+import snakeCase from 'lodash.snakecase';
+import isPlainObject from 'lodash.isplainobject'
 
-/**
- * @description walk tree
- * @param {Object | Array} obj
- * @param {Function} cb - callback
- * @returns {Object | Array}
- */
 function walk(obj, cb): any {
   const x = Array.isArray(obj) ? [] : {};
 
