@@ -1,17 +1,14 @@
-'use strict';
-
-import test from 'ava';
 import * as convertKeys from '../';
 
-test('should return an empty object when give an empty object', (t) => {
-  t.deepEqual(convertKeys.toCamel<{}>({}), {});
+test('should return an empty object when give an empty object', () => {
+  expect(convertKeys.toCamel<{}>({})).toEqual({});
 });
 
-test('should return an empty array when give an empty array', (t) => {
-  t.deepEqual(convertKeys.toCamel<[]>([]), []);
+test('should return an empty array when give an empty array', () => {
+  expect(convertKeys.toCamel<[]>([])).toEqual([]);
 });
 
-test('should return object as coverted camel case', (t) => {
+test('should return object as converted camel case', () => {
   const obj = {
     'hoge_fuga': 1,
     'hogeHoge': {
@@ -36,10 +33,10 @@ test('should return object as coverted camel case', (t) => {
     ]
   };
 
-  t.deepEqual(convertKeys.toCamel<typeof res>(obj), res);
+  expect(convertKeys.toCamel<typeof res>(obj)).toEqual(res);
 });
 
-test('should return object as coverted snake case', (t) => {
+test('should return object as converted snake case', () => {
   const obj = {
     'hoge_fuga': 1,
     'hogeHoge': {
@@ -66,5 +63,5 @@ test('should return object as coverted snake case', (t) => {
     ]
   };
 
-  t.deepEqual(convertKeys.toSnake<typeof res>(obj), res);
+  expect(convertKeys.toSnake<typeof res>(obj)).toEqual(res);
 });
