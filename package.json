@@ -40,7 +40,7 @@
     "@types/lodash.forown": "^4.4.4",
     "@types/lodash.isplainobject": "^4.0.4",
     "@types/lodash.snakecase": "^4.1.4",
-    "ava": "^0.25.0",
+    "ava": "^6.0.0",
     "conventional-changelog-cli": "^1.2.0",
     "flowgen": "^1.2.2",
     "nyc": "^9.0.1",
